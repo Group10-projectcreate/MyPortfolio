@@ -50,7 +50,7 @@ export default function PortfolioWebsite() {
             </p>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6 tracking-tight">
-              Ruth Nekesa
+              Nekesa Wamalwa
             </h1>
 
             <h2 className="text-2xl md:text-3xl text-zinc-300 mb-8 font-medium">
