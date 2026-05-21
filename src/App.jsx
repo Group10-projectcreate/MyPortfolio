@@ -845,7 +845,8 @@ export default function PortfolioWebsite() {
               marginBottom: "2.5rem",
             }}
           >
-            <button
+            <a
+              href="https://www.linkedin.com/in/ruth-nekesa-329804208"
               className="btn-primary"
               style={{
                 background: "#0E9E87",
@@ -860,8 +861,9 @@ export default function PortfolioWebsite() {
               }}
             >
               LinkedIn ↗
-            </button>
-            <button
+            </a>
+            <a
+            href="https://github.com/Group10-projectcreate"
               className="btn-ghost"
               style={{
                 background: "transparent",
@@ -876,8 +878,9 @@ export default function PortfolioWebsite() {
               }}
             >
               GitHub ↗
-            </button>
-            <button
+            </a>
+            <a
+              href="https://mailto:ruthwaqmalwa48@gmail.com"
               className="btn-ghost"
               style={{
                 background: "transparent",
@@ -892,7 +895,7 @@ export default function PortfolioWebsite() {
               }}
             >
               Email Me
-            </button>
+            </a>
           </div>
 
           <div
