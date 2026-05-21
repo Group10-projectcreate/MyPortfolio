@@ -1,7 +1,7 @@
-import { useState } from "react";
+
 
 export default function PortfolioWebsite() {
-  const [activeSkill, setActiveSkill] = useState(null);
+  
 
   const projects = [
     {
