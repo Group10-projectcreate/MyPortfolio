@@ -1,7 +1,7 @@
-
+import { useState } from "react";
 
 export default function PortfolioWebsite() {
-  
+  const [activeSkill, setActiveSkill] = useState(null);
 
   const projects = [
     {
@@ -118,6 +118,21 @@ export default function PortfolioWebsite() {
         .btn-ghost:hover { border-color: #5DCAB4 !important; color: #fff !important; }
         .nav-link:hover { color: #0E9E87 !important; }
         .article-row:hover { background: rgba(14,158,135,0.04) !important; }
+
+        @media (max-width: 768px) {
+          .hero-grid { grid-template-columns: 1fr !important; }
+          .hero-right { display: none !important; }
+          .hero-left { padding: 2.5rem 1.5rem !important; border-right: none !important; }
+          .about-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+          .projects-grid { grid-template-columns: 1fr !important; }
+          .exp-grid { grid-template-columns: 1fr !important; }
+          .section-pad { padding: 2.5rem 1.25rem !important; }
+          nav { padding: 0 1.25rem !important; }
+          .nav-links { gap: 1rem !important; }
+          .tools-bar { padding: 1rem 1.25rem !important; gap: 1rem !important; }
+          .contact-section { padding: 3rem 1.25rem !important; }
+          footer { padding: 1rem 1.25rem !important; }
+        }
       `}</style>
 
       {/* NAV */}
@@ -146,7 +161,7 @@ export default function PortfolioWebsite() {
         >
           RNW
         </span>
-        <div style={{ display: "flex", gap: "1.75rem" }}>
+        <div className="nav-links" style={{ display: "flex", gap: "1.75rem" }}>
           {["About", "Projects", "Experience", "Contact"].map((l) => (
             <a
               key={l}
@@ -170,6 +185,7 @@ export default function PortfolioWebsite() {
 
       {/* HERO */}
       <div
+        className="hero-grid"
         style={{
           background: "#0D1B2A",
           color: "#fff",
@@ -180,6 +196,7 @@ export default function PortfolioWebsite() {
       >
         {/* Left */}
         <div
+          className="hero-left"
           style={{
             padding: "4rem 3rem",
             display: "flex",
@@ -254,7 +271,7 @@ export default function PortfolioWebsite() {
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <a
             href = "/RUTH_WAMALWA_TSE.pdf"
-                    download
+                    download  
               className="btn-primary"
               style={{
                 background: "#0E9E87",
@@ -295,6 +312,7 @@ export default function PortfolioWebsite() {
 
         {/* Right — stats + tickets */}
         <div
+          className="hero-right"
           style={{
             padding: "3rem 2.5rem",
             display: "flex",
@@ -390,6 +408,7 @@ export default function PortfolioWebsite() {
 
       {/* TOOLS BAR */}
       <div
+        className="tools-bar"
         style={{
           background: "#0D1B2A",
           padding: "1.25rem 2.5rem",
@@ -433,8 +452,9 @@ export default function PortfolioWebsite() {
       </div>
 
       {/* ABOUT + SKILLS */}
-      <section style={{ padding: "4rem 2.5rem" }}>
+      <section className="section-pad" style={{ padding: "4rem 2.5rem" }}>
         <div
+          className="about-grid"
           style={{
             maxWidth: "1100px",
             margin: "0 auto",
@@ -509,6 +529,7 @@ export default function PortfolioWebsite() {
 
       {/* PROJECTS */}
       <section
+        className="section-pad"
         style={{
           padding: "4rem 2.5rem",
           background: "#fff",
@@ -546,7 +567,7 @@ export default function PortfolioWebsite() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
+          <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
             {projects.map((p) => (
               <div
                 key={p.title}
@@ -637,7 +658,7 @@ export default function PortfolioWebsite() {
       </section>
 
       {/* EXPERIENCE + WRITING */}
-      <section style={{ padding: "4rem 2.5rem", background: "#EDE9E0" }}>
+      <section className="section-pad" style={{ padding: "4rem 2.5rem", background: "#EDE9E0" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <SectionLabel>Experience & Writing</SectionLabel>
           <h2
@@ -652,7 +673,7 @@ export default function PortfolioWebsite() {
             Work History & Knowledge Sharing
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
+          <div className="exp-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
             {/* Experience card */}
             <div
               style={{
@@ -780,6 +801,7 @@ export default function PortfolioWebsite() {
 
       {/* CONTACT */}
       <section
+        className="contact-section"
         style={{
           background: "#0D1B2A",
           color: "#fff",
@@ -846,7 +868,7 @@ export default function PortfolioWebsite() {
             }}
           >
             <a
-              href="https://www.linkedin.com/in/ruth-nekesa-329804208"
+               href="https://www.linkedin.com/in/ruth-nekesa-329804208"
               className="btn-primary"
               style={{
                 background: "#0E9E87",
@@ -863,7 +885,7 @@ export default function PortfolioWebsite() {
               LinkedIn ↗
             </a>
             <a
-            href="https://github.com/Group10-projectcreate"
+              href="https://github.com/Group10-projectcreate"
               className="btn-ghost"
               style={{
                 background: "transparent",
@@ -880,7 +902,7 @@ export default function PortfolioWebsite() {
               GitHub ↗
             </a>
             <a
-              href="https://mailto:ruthwaqmalwa48@gmail.com"
+              href="https://mailto:ruthwamalwa48@gmail.com"
               className="btn-ghost"
               style={{
                 background: "transparent",
